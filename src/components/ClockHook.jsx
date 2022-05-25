@@ -7,8 +7,9 @@ const ClockHook = () => {
     setDate(new Date());
   };
   useEffect(() => {
+    // 1초 마다 시간 값을 다시 넣어줌
     setInterval(() => tick(), 1000);
-  });
+  }, []);
   return (
     <div>
       <h1>{date.toLocaleTimeString()}</h1>
