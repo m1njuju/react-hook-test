@@ -27,6 +27,7 @@ const AvrgHook = () => {
     return sum / list.length;
   };
   // 두 번째 인자 []는 어떤 값이 바뀔 때(업데이트 될 때)만 실행할 것인지
+  // 두 번째 인자값이 바뀔 때 마다 함수 내용을 실행
   const avr = useMemo(() => avrNum(num), [num]);
 
   return (
